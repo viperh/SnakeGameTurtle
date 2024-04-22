@@ -34,10 +34,9 @@ while game_is_on:
     time.sleep(0.1)
     s.move()
 
-    if s.segments[0].xcor() > screen_width or s.segments[0].xcor() < -screen_width or s.segments[
-        0].ycor() > screen_height or s.segments[0].ycor() < -screen_height:
+    if s.segments[0].xcor() > screen_width or s.segments[0].xcor() < -screen_width or s.segments[0].ycor() > screen_height or s.segments[0].ycor() < -screen_height:
         game_is_on = False
-        print("Game Over")
+        score.game_over()
 
     if s.segments[0].distance(f) < 15:
         f.refresh()
